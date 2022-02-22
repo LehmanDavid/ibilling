@@ -18,6 +18,7 @@ class CreateNewContract extends NewContractEvent {
   final UserModel userModel;
 
   const CreateNewContract({required this.userModel});
+  @override
   List<Object> get props => [userModel];
 }
 

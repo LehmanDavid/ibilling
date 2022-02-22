@@ -5,17 +5,18 @@ import 'package:jiffy/jiffy.dart';
 
 abstract class ContractRepository {
   Future<List<UserModel>> getContracts();
-
-  /// Returns true if successfully created
   Future<bool> createContract(UserModel newContract);
+  void getC();
 }
 
 class ContractRepositoryImpl extends ContractRepository {
   List<UserModel> _contracts = [];
 
-  ContractRepositoryImpl() {
+  // ContractRepositoryImpl() {}
+
+  void setContract() {
     _contracts = List.generate(
-      50,
+      100,
       (index) => UserModel(
         num: dataImplementation(index, '152', '156', '154', '158'),
         name: dataImplementation(
@@ -31,11 +32,17 @@ class ContractRepositoryImpl extends ContractRepository {
     );
   }
 
+  @override
+  void getC() {
+    if (_contracts.length < 100) {
+      setContract();
+    }
+  }
+
   List<String> generateDateTime(DateTime startDate) {
     List<String> datelist = [];
     for (int i = 0; i < 200; i++) {
-      datelist.add(
-          Jiffy(Jiffy(startDate)).add(days: i).format('dd.MM.yyyy').toString());
+      datelist.add(Jiffy(startDate).add(days: i).format('dd.MM.yyyy'));
     }
     return datelist;
   }
@@ -59,6 +66,7 @@ class ContractRepositoryImpl extends ContractRepository {
   @override
   Future<List<UserModel>> getContracts() async {
     Future.delayed(Duration(milliseconds: Random().nextInt(500) + 1000));
+
     return _contracts;
   }
 

@@ -15,16 +15,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("rebuild app");
     final repository = ContractRepositoryImpl();
     return MultiBlocProvider(
         providers: [
           BlocProvider(
-              create: (_) => DateBloc(repository)
-                ..add(ContractLoad(activeDay: DateTime.now()))),
+            create: (_) => DateBloc(repository)
+              ..add(
+                ContractLoad(activeDay: DateTime.now()),
+              ),
+          ),
           BlocProvider(create: (_) => NextweekCubit()),
-          BlocProvider(
-              create: (context) =>
-                  NewContractBloc(repository)..add(const LoadNewContract()))
+          BlocProvider(create: (context) => NewContractBloc(repository)),
         ],
         child: const MaterialApp(
           debugShowCheckedModeBanner: false,

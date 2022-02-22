@@ -29,8 +29,9 @@ class TableItem extends StatelessWidget {
               Text(
                 day.toString(),
                 style: TextStyle(
-                    color:
-                        dayNum == state.activeDay ? Colors.white : Colors.grey),
+                    color: dayNum.compareToByDate(state.activeDay)
+                        ? Colors.white
+                        : Colors.grey),
               ),
               const SizedBox(
                 height: 5,
@@ -38,8 +39,9 @@ class TableItem extends StatelessWidget {
               Text(
                 Jiffy(dayNum, "dd.MM.yyyy").date.toString(),
                 style: TextStyle(
-                    color:
-                        dayNum == state.activeDay ? Colors.white : Colors.grey),
+                    color: dayNum.compareToByDate(state.activeDay)
+                        ? Colors.white
+                        : Colors.grey),
               ),
               const SizedBox(
                 height: 5,
@@ -47,7 +49,9 @@ class TableItem extends StatelessWidget {
               Container(
                 height: 2,
                 width: 10,
-                color: dayNum == state.activeDay ? Colors.white : Colors.grey,
+                color: dayNum.compareToByDate(state.activeDay)
+                    ? Colors.white
+                    : Colors.grey,
               )
             ],
           ),

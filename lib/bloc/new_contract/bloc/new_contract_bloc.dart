@@ -14,10 +14,14 @@ class NewContractBloc extends Bloc<NewContractEvent, NewContractState> {
     on<CreateNewContract>(_onCreateNewContract);
     on<UpdateNewContract>(_onUpdateNewContract);
   }
-  void _onLoadNewContract(event, emit) {
-    emit(NewContractLoaded(usermodels: event.usermodels));
+  void _onLoadNewContract(event, emit) {}
+
+  void _onCreateNewContract(CreateNewContract event, emit) {
+    emit(NewContractLoading());
+
+    final isCreated = repository.createContract(event.userModel);
+    emit(NewContractLoaded(iscreated: isCreated));
   }
 
-  void _onCreateNewContract(event, emit) {}
   void _onUpdateNewContract(event, emit) {}
 }

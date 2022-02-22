@@ -10,10 +10,10 @@ abstract class NewContractState extends Equatable {
 class NewContractLoading extends NewContractState {}
 
 class NewContractLoaded extends NewContractState {
-  final List<UserModel> usermodels;
+  final Future<bool> iscreated;
 
-  const NewContractLoaded({this.usermodels = const <UserModel>[]});
+  const NewContractLoaded({required this.iscreated});
 
   @override
-  List<Object> get props => [usermodels];
+  List<Object> get props => [iscreated];
 }
