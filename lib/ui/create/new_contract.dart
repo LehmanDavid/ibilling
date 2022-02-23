@@ -31,8 +31,8 @@ class _NewContractState extends State<NewContract> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight),
         child: AppBar1(
           title: 'New Contract',
         ),
@@ -63,7 +63,7 @@ class _NewContractState extends State<NewContract> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4.0),
                   border: Border.all(
-                      color: Color(0xFFF1F1F1),
+                      color: const Color(0xFFF1F1F1),
                       style: BorderStyle.solid,
                       width: 1.2),
                 ),
@@ -204,7 +204,6 @@ class _NewContractState extends State<NewContract> {
               const SizedBox(height: 25),
               MaterialButton(
                 onPressed: () {
-                  print(DateTime.now().toString());
                   final usermodel = UserModel(
                       name: nameController.value.text,
                       amount: amountController.value.text,

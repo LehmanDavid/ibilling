@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:bloc/bloc.dart';
+import 'package:ibilling/models/invoice_model.dart';
 import 'package:ibilling/models/user_model.dart';
 import 'package:ibilling/repositories/contract_repository.dart';
 import 'package:jiffy/jiffy.dart';
@@ -33,9 +33,7 @@ class DateBloc extends Bloc<DateEvent, DateState> {
       ContractLoad event, Emitter<DateState> emit) async {
     repository.getC();
     final contract = await repository.getContracts();
-    print("suka: ${contract.length}");
     final sorted = genrateSortedContract(event.activeDay.toString(), contract);
-    print("pzds: ${sorted}");
     emit(DateState(paymentList: sorted, activeDay: event.activeDay));
   }
 }

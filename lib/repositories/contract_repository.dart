@@ -12,20 +12,18 @@ abstract class ContractRepository {
 class ContractRepositoryImpl extends ContractRepository {
   List<UserModel> _contracts = [];
 
-  // ContractRepositoryImpl() {}
-
   void setContract() {
     _contracts = List.generate(
       100,
       (index) => UserModel(
         num: dataImplementation(index, '152', '156', '154', '158'),
-        name: dataImplementation(
-            index, 'David Suleymanov', 'Angela Yu', 'Andy Ruiz', 'Rustam '),
+        name: dataImplementation(index, 'Klay Thompson', 'LeBron James',
+            'Steph Curry', 'Blake Griffin '),
         status: dataImplementation(
             index, 'Paid', 'In process', 'Rejected by payme', 'Rejected by IQ'),
         amount: dataImplementation(
-            index, '2 000 000', '5 000 000', '6 000 000', '7 000 000'),
-        lastInvoice: dataImplementation(index, '146', '153', '154', '164'),
+            index, '3 000 000', '5 000 000', '6 000 000', '8 000 000'),
+        lastInvoice: dataImplementation(index, '125', '153', '180', '164'),
         numberOfInvoice: dataImplementation(index, '6', '7', '5', '4'),
         date: generateDateTime(DateTime(2022, 01, 01))[index],
       ),

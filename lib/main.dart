@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ibilling/bloc/date_bloc.dart';
 import 'package:ibilling/bloc/new_contract/bloc/new_contract_bloc.dart';
+import 'package:ibilling/bloc/new_invoice/bloc/new_invoice_bloc.dart';
 import 'package:ibilling/repositories/contract_repository.dart';
 import 'package:ibilling/ui/home_page.dart';
 import 'cubit/nextweek/nextweek_cubit.dart';
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("rebuild app");
     final repository = ContractRepositoryImpl();
     return MultiBlocProvider(
         providers: [
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider(create: (_) => NextweekCubit()),
           BlocProvider(create: (context) => NewContractBloc(repository)),
+          BlocProvider(create: (context) => NewInvoiceBloc())
         ],
         child: const MaterialApp(
           debugShowCheckedModeBanner: false,

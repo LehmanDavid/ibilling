@@ -7,6 +7,8 @@ import 'package:jiffy/jiffy.dart';
 class TabCalendar extends StatelessWidget {
   final days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
+  TabCalendar({Key? key}) : super(key: key);
+
   List<DateTime> generateDateTable(int week) {
     var daylist = List.generate(
         6,

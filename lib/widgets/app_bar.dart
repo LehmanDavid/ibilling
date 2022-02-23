@@ -4,7 +4,7 @@ import 'package:ibilling/themes/colors.dart';
 
 class AppBar1 extends StatelessWidget {
   final String title;
-  AppBar1({Key? key, required this.title}) : super(key: key);
+  const AppBar1({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

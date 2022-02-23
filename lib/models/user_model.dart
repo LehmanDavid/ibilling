@@ -35,7 +35,6 @@ class UserModel {
         num: "num");
   }
 
-  @override
   List<Object?> get props =>
       [name, amount, lastInvoice, numberOfInvoice, status, date, num];
 
@@ -45,7 +44,7 @@ class UserModel {
         amount: "1250000",
         lastInvoice: "2",
         numberOfInvoice: "2",
-        status: "What",
+        status: "In Process",
         date: "2022.01.25",
         num: "185")
   ];

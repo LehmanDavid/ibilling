@@ -11,6 +11,7 @@ class LoadNewContract extends NewContractEvent {
   final List<UserModel> usermodels;
 
   const LoadNewContract({this.usermodels = const <UserModel>[]});
+  @override
   List<Object> get props => [usermodels];
 }
 
@@ -26,5 +27,6 @@ class UpdateNewContract extends NewContractEvent {
   final UpdateNewContract userModel;
 
   const UpdateNewContract({required this.userModel});
+  @override
   List<Object> get props => [userModel];
 }

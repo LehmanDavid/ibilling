@@ -66,8 +66,10 @@ class ChooseType extends StatelessWidget {
                     backgroundColor:
                         MaterialStateProperty.all(const Color(0xFF4E4E4E))),
                 onPressed: () async {
-                  await Navigator.push(context,
-                      MaterialPageRoute(builder: (constext) => NewInvoice()));
+                  await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (constext) => const NewInvoice()));
                   Navigator.of(context).pop();
                 },
                 child: Row(

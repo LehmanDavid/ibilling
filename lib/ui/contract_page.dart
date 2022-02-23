@@ -6,6 +6,7 @@ import 'package:ibilling/widgets/app_bar.dart';
 import 'package:ibilling/widgets/contract_buttons.dart';
 import 'package:ibilling/widgets/contract_card.dart';
 import 'package:ibilling/widgets/custom%20calendar/calendar.dart';
+import 'package:ibilling/widgets/invoice_card.dart';
 
 class ContractPage extends StatelessWidget {
   const ContractPage({Key? key}) : super(key: key);
@@ -13,8 +14,8 @@ class ContractPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight),
         child: AppBar1(
           title: 'Contracts',
         ),
@@ -57,7 +58,15 @@ class ContractPage extends StatelessWidget {
                           );
                         },
                       ),
-                    )
+                    ),
+                    // SizedBox(
+                    //   height: 300,
+                    //   child: ListView.builder(
+                    //     physics: const BouncingScrollPhysics(),
+                    //     itemBuilder: (BuildContext context, int index){
+                    //       return InvoiceCard(invoice: state.)
+                    //     }),
+                    // )
                   ],
                 ),
               ],
