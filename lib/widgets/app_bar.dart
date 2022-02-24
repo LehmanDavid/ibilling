@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibilling/themes/colors.dart';
+import '../themes/colors.dart';
 
 class AppBar1 extends StatelessWidget {
   final String title;

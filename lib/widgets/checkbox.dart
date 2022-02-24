@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibilling/themes/colors.dart';
+import '../themes/colors.dart';
 
 class TextCheckBox extends StatefulWidget {
   final Widget text;

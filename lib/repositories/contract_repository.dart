@@ -1,7 +1,8 @@
 import 'dart:math';
 
-import 'package:ibilling/models/user_model.dart';
 import 'package:jiffy/jiffy.dart';
+
+import '../models/user_model.dart';
 
 abstract class ContractRepository {
   Future<List<UserModel>> getContracts();

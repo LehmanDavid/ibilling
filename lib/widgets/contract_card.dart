@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibilling/models/user_model.dart';
-import 'package:ibilling/themes/colors.dart';
+
+import '../models/user_model.dart';
+import '../themes/colors.dart';
 
 class ContractCard extends StatelessWidget {
   final UserModel userpayment;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibilling/bloc/date_bloc.dart';
+import '../../bloc/date_bloc.dart';
 import '../../utils/compare_by_date.dart';
 import 'package:jiffy/jiffy.dart';
 

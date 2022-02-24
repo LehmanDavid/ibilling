@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:ibilling/models/invoice_model.dart';
+
+import '../../../models/invoice_model.dart';
 
 part 'new_invoice_event.dart';
 part 'new_invoice_state.dart';

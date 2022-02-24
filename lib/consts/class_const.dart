@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ibilling/ui/contract_page.dart';
-import 'package:ibilling/ui/create/new_contract.dart';
-import 'package:ibilling/ui/history_page.dart';
-import 'package:ibilling/ui/profile_page.dart';
-import 'package:ibilling/ui/saved_page.dart';
+import '../ui/contract_page.dart';
+import '../ui/create/new_contract.dart';
+import '../ui/history_page.dart';
+import '../ui/profile_page.dart';
+import '../ui/saved_page.dart';
 
 class Pages {
   static var pages = <Widget>[

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibilling/models/invoice_model.dart';
-import 'package:ibilling/themes/colors.dart';
+import '../models/invoice_model.dart';
+import '../themes/colors.dart';
 
 class InvoiceCard extends StatelessWidget {
   final Invoice invoice;

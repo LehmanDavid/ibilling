@@ -1,15 +1,28 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibilling/bloc/date_bloc.dart';
-import 'package:ibilling/bloc/new_contract/bloc/new_contract_bloc.dart';
-import 'package:ibilling/bloc/new_invoice/bloc/new_invoice_bloc.dart';
-import 'package:ibilling/models/invoice_model.dart';
-import 'package:ibilling/repositories/contract_repository.dart';
-import 'package:ibilling/ui/home_page.dart';
-import 'cubit/nextweek/nextweek_cubit.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'bloc/date_bloc.dart';
+import 'bloc/new_contract/bloc/new_contract_bloc.dart';
+import 'bloc/new_invoice/bloc/new_invoice_bloc.dart';
+import 'cubit/nextweek/nextweek_cubit.dart';
+import 'models/invoice_model.dart';
+import 'repositories/contract_repository.dart';
+import 'ui/home_page.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  runApp(
+    EasyLocalization(
+        supportedLocales: const [
+          Locale('en'),
+          Locale('ru'),
+        ],
+        path: 'assets/lang',
+        fallbackLocale: const Locale('en'),
+        child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -42,9 +55,12 @@ class MyApp extends StatelessWidget {
               ),
           ),
         ],
-        child: const MaterialApp(
+        child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
+          home: const HomeScreen(),
         ));
   }
 }

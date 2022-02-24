@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibilling/bloc/date_bloc.dart';
-import 'package:ibilling/bloc/new_contract/bloc/new_contract_bloc.dart';
-import 'package:ibilling/bloc/new_invoice/bloc/new_invoice_bloc.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/widgets/app_bar.dart';
-import 'package:ibilling/widgets/contract_buttons.dart';
-import 'package:ibilling/widgets/contract_card.dart';
-import 'package:ibilling/widgets/custom%20calendar/calendar.dart';
-import 'package:ibilling/widgets/invoice_card.dart';
+import '../bloc/date_bloc.dart';
+import '../bloc/new_contract/bloc/new_contract_bloc.dart';
+import '../bloc/new_invoice/bloc/new_invoice_bloc.dart';
+import '../themes/colors.dart';
+import '../widgets/app_bar.dart';
+import '../widgets/contract_buttons.dart';
+import '../widgets/contract_card.dart';
+import '../widgets/custom%20calendar/calendar.dart';
+import '../widgets/invoice_card.dart';
 
 class ContractPage extends StatefulWidget {
   const ContractPage({Key? key}) : super(key: key);

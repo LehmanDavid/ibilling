@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibilling/cubit/nextweek/nextweek_cubit.dart';
-import 'package:ibilling/widgets/custom%20calendar/calendar_item.dart';
+import '../../cubit/nextweek/nextweek_cubit.dart';
+import '../custom%20calendar/calendar_item.dart';
 import 'package:jiffy/jiffy.dart';
 
 class TabCalendar extends StatelessWidget {

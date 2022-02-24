@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibilling/cubit/main_page/main_page_cubit.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/themes/theme.dart';
-import 'package:ibilling/ui/create/new_contract.dart';
-import 'package:ibilling/ui/create/new_invoice.dart';
+import '../cubit/main_page/main_page_cubit.dart';
+import '../themes/colors.dart';
+import '../themes/theme.dart';
+import '../ui/create/new_contract.dart';
+import '../ui/create/new_invoice.dart';
 import 'package:provider/src/provider.dart';
 
 class ChooseType extends StatelessWidget {

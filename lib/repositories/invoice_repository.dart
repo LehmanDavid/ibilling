@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:ibilling/models/invoice_model.dart';
+import '../models/invoice_model.dart';
 
 abstract class InvoiceRepository {
   Future<List<Invoice>> getInvoice();

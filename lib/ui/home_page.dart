@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibilling/cubit/main_page/main_page_cubit.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/ui/contract_page.dart';
-import 'package:ibilling/ui/history_page.dart';
-import 'package:ibilling/ui/profile_page.dart';
-import 'package:ibilling/ui/saved_page.dart';
-import 'package:ibilling/widgets/choose_type.dart';
+import '../cubit/main_page/main_page_cubit.dart';
+import '../themes/colors.dart';
+import 'contract_page.dart';
+import 'history_page.dart';
+import 'profile_page.dart';
+import 'saved_page.dart';
+import '../widgets/choose_type.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _HomeScreenContent extends StatelessWidget {
     HistoryPage(),
     ChooseType(),
     SavedPage(),
-   // ProfilePage()
+    ProfilePage()
   ];
 
   void _onItemTapped(BuildContext context, int index) async {
@@ -69,31 +70,31 @@ class _HomeScreenContent extends StatelessWidget {
             unselectedItemColor: BillingColor.greyColor,
             items: [
               BottomNavigationBarItem(
-                label: 'Contracts',
+                label: 'contracts'.tr(),
                 icon: state == 0
                     ? SvgPicture.asset('assets/icons/Bookmark1.svg')
                     : SvgPicture.asset('assets/icons/Bookmark2.svg'),
               ),
               BottomNavigationBarItem(
-                label: 'History',
+                label: 'history'.tr(),
                 icon: state == 1
                     ? SvgPicture.asset('assets/icons/clock1.svg')
                     : SvgPicture.asset('assets/icons/clock2.svg'),
               ),
               BottomNavigationBarItem(
-                label: 'New',
+                label: 'new'.tr(),
                 icon: state == 2
                     ? SvgPicture.asset('assets/icons/Plus1.svg')
                     : SvgPicture.asset('assets/icons/Plus2.svg'),
               ),
               BottomNavigationBarItem(
-                label: 'Saved',
+                label: 'saved'.tr(),
                 icon: state == 3
                     ? SvgPicture.asset('assets/icons/Bookmark1.svg')
                     : SvgPicture.asset('assets/icons/Bookmark2.svg'),
               ),
               BottomNavigationBarItem(
-                label: 'Profile',
+                label: 'profile'.tr(),
                 icon: state == 4
                     ? SvgPicture.asset('assets/icons/Profile1.svg')
                     : SvgPicture.asset('assets/icons/Profile2.svg'),

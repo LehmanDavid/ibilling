@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/widgets/app_bar.dart';
+import '../themes/colors.dart';
+import '../widgets/app_bar.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({Key? key}) : super(key: key);

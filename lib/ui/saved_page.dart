@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibilling/bloc/date_bloc.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/widgets/app_bar.dart';
-import 'package:ibilling/widgets/contract_card.dart';
+import '../bloc/date_bloc.dart';
+import '../themes/colors.dart';
+import '../widgets/app_bar.dart';
+import '../widgets/contract_card.dart';
 
 class SavedPage extends StatelessWidget {
   const SavedPage({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibilling/bloc/new_invoice/bloc/new_invoice_bloc.dart';
-import 'package:ibilling/themes/colors.dart';
+import '../bloc/new_invoice/bloc/new_invoice_bloc.dart';
+import '../themes/colors.dart';
 
 class ContractButtons extends StatefulWidget {
   const ContractButtons({Key? key}) : super(key: key);

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibilling/bloc/date_bloc.dart';
-import 'package:ibilling/bloc/new_contract/bloc/new_contract_bloc.dart';
-import 'package:ibilling/consts/class_const.dart';
-import 'package:ibilling/models/user_model.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/themes/theme.dart';
-import 'package:ibilling/widgets/app_bar.dart';
-import 'package:ibilling/widgets/checkbox.dart';
-import 'package:ibilling/widgets/new_contract_textfield.dart';
+import '../../bloc/date_bloc.dart';
+import '../../bloc/new_contract/bloc/new_contract_bloc.dart';
+import '../../consts/class_const.dart';
+import '../../models/user_model.dart';
+import '../../themes/colors.dart';
+import '../../themes/theme.dart';
+import '../../widgets/app_bar.dart';
+import '../../widgets/checkbox.dart';
+import '../../widgets/new_contract_textfield.dart';
 import 'package:jiffy/jiffy.dart';
 
 class NewContract extends StatefulWidget {

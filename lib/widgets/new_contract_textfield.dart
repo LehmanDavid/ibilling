@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ibilling/themes/colors.dart';
-import 'package:ibilling/themes/theme.dart';
+import '../themes/colors.dart';
+import '../themes/theme.dart';
 
 class NewContractTextfield extends StatelessWidget {
   final String title;
