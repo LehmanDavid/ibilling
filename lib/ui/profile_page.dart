@@ -16,9 +16,8 @@ enum Language { rus, eng }
 class _ProfilePageState extends State<ProfilePage> {
   Language _language = Language.eng;
   var lang = {
-    'English (USA)': SvgPicture.asset('assets/icons/en.svg'),
+    'English (USA)': SvgPicture.asset('assets/icons/us.svg'),
     'Русский': SvgPicture.asset('assets/icons/ru.svg'),
-    'O\'zbek (Lotin)': SvgPicture.asset('assets/icons/uz.svg'),
   };
 
   @override
@@ -42,9 +41,9 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             const SizedBox(width: 12),
-            const Text(
-              "Profile",
-              style: TextStyle(fontSize: 18.0, fontFamily: "Ubuntu"),
+            Text(
+              "profile".tr(),
+              style: const TextStyle(fontSize: 18.0, fontFamily: "Ubuntu"),
             ),
           ],
         ),
@@ -96,7 +95,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   children: [
                     const SizedBox(width: 20),
                     Text(
-                      'Date of birth:'.tr(),
+                      'date_of_birth'.tr(),
                       style: const TextStyle(
                           color: Colors.white,
                           fontFamily: 'Ubuntu',
@@ -113,9 +112,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 Row(
                   children: [
                     const SizedBox(width: 20),
-                    const Text(
-                      'Phone number: ',
-                      style: TextStyle(
+                    Text(
+                      'phone_number'.tr(),
+                      style: const TextStyle(
                           color: Colors.white,
                           fontFamily: 'Ubuntu',
                           fontSize: 14),
@@ -131,9 +130,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 Row(
                   children: [
                     const SizedBox(width: 20),
-                    const Text(
-                      'E-mail: ',
-                      style: TextStyle(
+                    Text(
+                      'email'.tr(),
+                      style: const TextStyle(
                           color: Colors.white,
                           fontFamily: 'Ubuntu',
                           fontSize: 14),
@@ -167,10 +166,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: SingleChildScrollView(
                           child: Material(
                             child: Container(
-                              // height: 280.0,
-                              decoration: BoxDecoration(
-                                color: BillingColor.darkerColor,
-                                borderRadius: BorderRadius.circular(8.0),
+                              decoration: const BoxDecoration(
+                                color: BillingColor.darkColor,
+                                //borderRadius: BorderRadius.circular(8.0),
                               ),
                               padding:
                                   const EdgeInsets.fromLTRB(24, 26, 26, 24),
@@ -178,9 +176,9 @@ class _ProfilePageState extends State<ProfilePage> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text(
-                                    'Choose a language',
-                                    style: TextStyle(
+                                  Text(
+                                    'choose_language'.tr(),
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.w700,
@@ -197,8 +195,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                       'Русский',
                                       style: BillingThemes.textTheme.headline6,
                                     ),
-                                    secondary:
-                                        SvgPicture.asset('assets/icons/ru.svg'),
+                                    secondary: SvgPicture.asset(
+                                      'assets/icons/ru.svg',
+                                      color: Colors.white,
+                                    ),
                                     controlAffinity:
                                         ListTileControlAffinity.trailing,
                                   ),
@@ -214,7 +214,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       style: BillingThemes.textTheme.headline6,
                                     ),
                                     secondary:
-                                        SvgPicture.asset('assets/icons/en.svg'),
+                                        SvgPicture.asset('assets/icons/us.svg'),
                                     controlAffinity:
                                         ListTileControlAffinity.trailing,
                                   ),
@@ -241,7 +241,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             color: BillingColor.darkGreenColor,
                                           ),
                                           child: Text(
-                                            'cancel',
+                                            'cancel'.tr(),
                                             style: BillingThemes
                                                 .textTheme.headline6
                                                 ?.copyWith(
@@ -271,7 +271,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             color: BillingColor.lightGreenColor,
                                           ),
                                           child: Text(
-                                            'done',
+                                            'done'.tr(),
                                             style: BillingThemes
                                                 .textTheme.headline6
                                                 ?.copyWith(color: Colors.white),
@@ -305,7 +305,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'language',
+                      'language'.tr(),
                       style: BillingThemes.textTheme.headline6,
                     ),
                     //lang['language'],

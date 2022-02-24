@@ -4,6 +4,7 @@ import '../ui/create/new_contract.dart';
 import '../ui/history_page.dart';
 import '../ui/profile_page.dart';
 import '../ui/saved_page.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Pages {
   static var pages = <Widget>[
@@ -11,29 +12,29 @@ class Pages {
     const HistoryPage(),
     const NewContract(),
     const SavedPage(),
-    //const ProfilePage(),
+    const ProfilePage(),
   ];
 }
 
 class Titles {
   static List<String> labels = <String>[
-    'contracts',
-    'history',
-    'new_contract',
-    'saved',
-    'profile',
-    'new_invoice',
+    'contracts'.tr(),
+    'history'.tr(),
+    'new_contract'.tr(),
+    'saved'.tr(),
+    'profile'.tr(),
+    'new_invoice'.tr(),
   ];
 
   static List<String> statuses = <String>[
-    'paid',
-    'in_process',
-    'rejected_by_IQ',
-    'rejected_by_payme',
+    'paid'.tr(),
+    'in_process'.tr(),
+    'rejected_by_IQ'.tr(),
+    'rejected_by_payme'.tr(),
   ];
 
   static List<String> entity = <String>[
-    'individual',
-    'legal_entity',
+    'individual'.tr(),
+    'legal_entity'.tr(),
   ];
 }

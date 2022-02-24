@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../models/invoice_model.dart';
 import '../themes/colors.dart';
-
+import 'package:easy_localization/easy_localization.dart';
 class InvoiceCard extends StatelessWidget {
   final Invoice invoice;
   const InvoiceCard({Key? key, required this.invoice}) : super(key: key);
@@ -56,9 +56,9 @@ class InvoiceCard extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text(
-                'Service Name: ',
-                style: TextStyle(
+               Text(
+                'service_name'.tr(),
+                style: const TextStyle(
                     fontSize: 14.0, fontFamily: 'Ubuntu', color: Colors.white),
               ),
               const SizedBox(width: 5),
@@ -76,9 +76,9 @@ class InvoiceCard extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text(
-                'Amount: ',
-                style: TextStyle(
+               Text(
+                'amount'.tr(),
+                style: const TextStyle(
                     fontSize: 14.0, fontFamily: 'Ubuntu', color: Colors.white),
               ),
               const SizedBox(width: 5),

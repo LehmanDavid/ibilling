@@ -11,6 +11,7 @@ import '../../widgets/app_bar.dart';
 import '../../widgets/checkbox.dart';
 import '../../widgets/new_contract_textfield.dart';
 import 'package:jiffy/jiffy.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class NewContract extends StatefulWidget {
   const NewContract({Key? key}) : super(key: key);
@@ -117,7 +118,7 @@ class _NewContractState extends State<NewContract> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 6, left: 30),
                     child: Text(
-                      "INN",
+                      "ITN".tr(),
                       style: BillingThemes.textTheme.bodyText2,
                     ),
                   ),
@@ -209,7 +210,7 @@ class _NewContractState extends State<NewContract> {
                       amount: amountController.value.text,
                       lastInvoice: "5",
                       numberOfInvoice: "2",
-                      status: statusController.value.text,
+                      status: "in_process".tr(),
                       date: Jiffy(DateTime.now()).format('dd.MM.yyyy'),
                       num: "200");
                   context

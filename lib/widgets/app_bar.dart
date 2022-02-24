@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../themes/colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class AppBar1 extends StatelessWidget {
   final String title;
@@ -25,7 +26,7 @@ class AppBar1 extends StatelessWidget {
           ),
           const SizedBox(width: 12),
           Text(
-            title,
+            title.tr(),
             style: const TextStyle(fontSize: 18.0, fontFamily: "Ubuntu"),
           ),
         ],

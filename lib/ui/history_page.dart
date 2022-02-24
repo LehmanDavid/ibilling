@@ -12,7 +12,7 @@ class HistoryPage extends StatelessWidget {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),
         child: AppBar1(
-          title: 'History',
+          title: 'history',
         ),
       ),
       body: Container(

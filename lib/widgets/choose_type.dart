@@ -6,6 +6,7 @@ import '../themes/theme.dart';
 import '../ui/create/new_contract.dart';
 import '../ui/create/new_invoice.dart';
 import 'package:provider/src/provider.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ChooseType extends StatelessWidget {
   const ChooseType({Key? key}) : super(key: key);
@@ -20,9 +21,9 @@ class ChooseType extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 15),
-            const Text(
-              'What do you want to create?',
-              style: TextStyle(
+            Text(
+              'what_dou_you_wanna_create'.tr(),
+              style: const TextStyle(
                   color: Colors.white,
                   fontFamily: 'Ubuntu',
                   fontSize: 16,
@@ -52,7 +53,8 @@ class ChooseType extends StatelessWidget {
                   children: [
                     SvgPicture.asset('assets/icons/contract.svg'),
                     const SizedBox(width: 16),
-                    Text('Contract', style: BillingThemes.textTheme.bodyText1)
+                    Text('contracts'.tr(),
+                        style: BillingThemes.textTheme.bodyText1)
                   ],
                 ),
               ),
@@ -78,7 +80,8 @@ class ChooseType extends StatelessWidget {
                   children: [
                     SvgPicture.asset('assets/icons/invoice.svg'),
                     const SizedBox(width: 16),
-                    Text('Invoice', style: BillingThemes.textTheme.bodyText1)
+                    Text('invoice'.tr(),
+                        style: BillingThemes.textTheme.bodyText1)
                   ],
                 ),
               ),

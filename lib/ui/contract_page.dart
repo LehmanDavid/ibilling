@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/date_bloc.dart';
-import '../bloc/new_contract/bloc/new_contract_bloc.dart';
 import '../bloc/new_invoice/bloc/new_invoice_bloc.dart';
 import '../themes/colors.dart';
 import '../widgets/app_bar.dart';
-import '../widgets/contract_buttons.dart';
 import '../widgets/contract_card.dart';
 import '../widgets/custom%20calendar/calendar.dart';
 import '../widgets/invoice_card.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ContractPage extends StatefulWidget {
   const ContractPage({Key? key}) : super(key: key);
@@ -26,7 +25,7 @@ class _ContractPageState extends State<ContractPage> {
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),
           child: AppBar1(
-            title: 'Contracts',
+            title: 'contracts',
           ),
         ),
         body: Container(
@@ -62,7 +61,7 @@ class _ContractPageState extends State<ContractPage> {
                           colorBox: _contractOrInvoice == 1
                               ? BillingColor.lightGreenColor
                               : BillingColor.darkWorld,
-                          title: "Contracts",
+                          title: "contracts".tr(),
                           onTap: () {
                             setState(() {
                               _contractOrInvoice = 1;
@@ -76,7 +75,7 @@ class _ContractPageState extends State<ContractPage> {
                           colorBox: _contractOrInvoice == 0
                               ? BillingColor.lightGreenColor
                               : BillingColor.darkWorld,
-                          title: "Invoice",
+                          title: "invoice".tr(),
                           onTap: () {
                             setState(() {
                               _contractOrInvoice = 0;

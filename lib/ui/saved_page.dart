@@ -14,7 +14,7 @@ class SavedPage extends StatelessWidget {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),
         child: AppBar1(
-          title: 'Saved',
+          title: 'saved',
         ),
       ),
       body: BlocBuilder<DateBloc, DateState>(

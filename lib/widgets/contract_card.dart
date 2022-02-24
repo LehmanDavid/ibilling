@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../models/user_model.dart';
 import '../themes/colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ContractCard extends StatelessWidget {
   final UserModel userpayment;
@@ -79,9 +80,9 @@ class ContractCard extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text(
-                'Amount: ',
-                style: TextStyle(
+              Text(
+                'amount'.tr(),
+                style: const TextStyle(
                     fontSize: 14.0, fontFamily: 'Ubuntu', color: Colors.white),
               ),
               const SizedBox(width: 5),
@@ -99,9 +100,9 @@ class ContractCard extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text(
-                'Last invoice: ',
-                style: TextStyle(
+              Text(
+                'last_invoice'.tr(),
+                style: const TextStyle(
                     fontSize: 14.0, fontFamily: 'Ubuntu', color: Colors.white),
               ),
               const SizedBox(width: 5),
@@ -119,9 +120,9 @@ class ContractCard extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text(
-                'Number of invoices: ',
-                style: TextStyle(
+              Text(
+                'number_of_invoice'.tr(),
+                style: const TextStyle(
                     fontSize: 14.0, fontFamily: 'Ubuntu', color: Colors.white),
               ),
               const SizedBox(width: 5),
