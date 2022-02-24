@@ -31,13 +31,13 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (context) => NewInvoiceBloc()
               ..add(
-                 LoadNewInvoice(invoices: [
+                LoadNewInvoice(invoices: [
                   Invoice(
-                    servicename: "servicename", 
-                    amount: "amount", 
-                    status: "status", 
-                    date: "date", 
-                    num: "num")
+                      servicename: "servicename",
+                      amount: "amount",
+                      status: "status",
+                      date: "date",
+                      num: "num")
                 ]),
               ),
           ),
