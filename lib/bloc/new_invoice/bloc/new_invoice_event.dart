@@ -10,7 +10,7 @@ abstract class NewInvoiceEvent extends Equatable {
 class LoadNewInvoice extends NewInvoiceEvent {
   final List<Invoice> invoices;
 
-  const LoadNewInvoice({this.invoices = const <Invoice>[]});
+  const LoadNewInvoice({required this.invoices});
   @override
   List<Object> get props => [invoices];
 }

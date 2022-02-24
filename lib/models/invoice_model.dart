@@ -29,7 +29,7 @@ class Invoice {
 
   List<Object?> get props => [servicename, amount, status, date, num];
 
-  static List<Invoice> invoice = [
+  static List<Invoice> invoices = [
     Invoice(
         servicename: "Expand",
         amount: "1250000",

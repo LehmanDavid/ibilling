@@ -11,7 +11,7 @@ class Pages {
     const HistoryPage(),
     const NewContract(),
     const SavedPage(),
-    const ProfilePage(),
+    //const ProfilePage(),
   ];
 }
 

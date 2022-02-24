@@ -47,7 +47,7 @@ class _ContractButtonsState extends State<ContractButtons> {
             ),
             MaterialButton(
               onPressed: () {
-                context.read<NewInvoiceBloc>().add(const LoadNewInvoice());
+               // context.read<NewInvoiceBloc>().add( LoadNewInvoice());
                 setState(() {
                   _isContract = false;
                   _isInvoice = true;

@@ -8,7 +8,7 @@ abstract class InvoiceRepository {
 }
 
 class InvoiceRepositoryImpl extends InvoiceRepository {
-  List<Invoice> _invoices = [];
+  final List<Invoice> _invoices = [];
   @override
   Future<bool> createinvoice(Invoice invoice) async {
     try {

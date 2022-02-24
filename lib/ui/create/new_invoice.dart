@@ -145,7 +145,7 @@ class _NewInvoiceState extends State<NewInvoice> {
                   context
                       .read<NewInvoiceBloc>()
                       .add(CreateNewInvoice(invoice: invoicemodel));
-                  Navigator.of(context).pop();
+                  //Navigator.of(context).pop();
                 },
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(122, 13, 122, 13),

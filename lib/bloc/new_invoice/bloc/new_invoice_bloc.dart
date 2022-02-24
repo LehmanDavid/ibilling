@@ -6,14 +6,14 @@ part 'new_invoice_event.dart';
 part 'new_invoice_state.dart';
 
 class NewInvoiceBloc extends Bloc<NewInvoiceEvent, NewInvoiceState> {
-  //List<Invoice> invoicelist = [];
+  final List<Invoice> invoicelist = [];
   NewInvoiceBloc() : super(NewInvoiceLoading()) {
     on<LoadNewInvoice>(_onLoadNewInvoice);
     on<CreateNewInvoice>(_onCreateNewInvoice);
     on<UpdateNewInvoice>(_onUpdateNewInvoice);
   }
-  void _onLoadNewInvoice(event, emit) {
-    //emit(NewInvoiceLoaded(invoices: event.invoices));   //WTF
+  void _onLoadNewInvoice(LoadNewInvoice event, emit) {
+    emit(NewInvoiceLoaded(invoices: event.invoices));  
   }
 
   void _onCreateNewInvoice(CreateNewInvoice event, emit) {

@@ -34,7 +34,7 @@ class _HomeScreenContent extends StatelessWidget {
     HistoryPage(),
     ChooseType(),
     SavedPage(),
-    ProfilePage()
+   // ProfilePage()
   ];
 
   void _onItemTapped(BuildContext context, int index) async {
